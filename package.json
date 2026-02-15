@@ -1,0 +1,28 @@
+{
+  "name": "output2pdf",
+  "version": "1.0.0",
+  "description": "Pack question PNG outputs into a print-ready PDF with minimal space.",
+  "bin": {
+    "make-pdf": "./make-report-pdf.js"
+  },
+  "files": [
+    "make-report-pdf.js",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "make-pdf": "node make-report-pdf.js",
+    "help": "node make-report-pdf.js --help"
+  },
+  "keywords": [
+    "pdf",
+    "report",
+    "png",
+    "a4",
+    "print"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}
