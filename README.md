@@ -8,19 +8,26 @@ Question labels are rendered above each image to avoid overlap with screenshot c
 ## Install
 
 ```bash
-npm install
+npm install -g output2pdf
 ```
 
-For local use in this folder:
+After global install, run from anywhere:
 
 ```bash
-npm run make-pdf
+make-pdf --help
+```
+
+For local development in this repository:
+
+```bash
+npm install
+npm run make-pdf -- --help
 ```
 
 ## Usage
 
 ```bash
-node make-report-pdf.js [roll_no] [input_dir] [output_pdf] [options]
+make-pdf [roll_no] [input_dir] [output_pdf] [options]
 ```
 
 ## Project structure
@@ -53,16 +60,16 @@ output2pdf/
 
 ```bash
 # A4 PDF from current folder, output: javascript-report.pdf
-npm run make-pdf
+make-pdf
 
 # Add roll number beside every label
-node make-report-pdf.js 24
+make-pdf 48
 
 # Custom output file (".pdf" is auto-added if missing)
-node make-report-pdf.js 24 . final-report
+make-pdf 48 . final-report
 
 # Extra-tight layout
-node make-report-pdf.js --roll 24 --compact
+make-pdf --roll 48 --compact
 ```
 
 ## Options
